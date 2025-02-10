@@ -35,7 +35,7 @@ Scanner input=new Scanner(System.in);
 System.out.println("fibinocci series");
 System.out.println("enter a number:");
 int n =input.nextInt();
-int f1=0,f2=1;
+int f1=0,f2=1;<br>
 System.out.println(" "+f1);
 System.out.println(" "+f2);
 for ( int i=1;i<=n;i++){
@@ -43,8 +43,12 @@ int f3=f1+f2;
 System.out.println(" "+f3);
 f1=f2;
 f2=f3;
+}<br><br>
+int fact=1;
+for(int i=1;i<=n;i++){
+fact=fact*i;
 }
-
+System.out.println("factorial of given number:"+fact);
 
 }
 }
