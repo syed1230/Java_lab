@@ -43,12 +43,20 @@ int f3=f1+f2;
 System.out.println(" "+f3);
 f1=f2;
 f2=f3;
-}<br><br>
+}<br>
 int fact=1;
 for(int i=1;i<=n;i++){
 fact=fact*i;
 }
-System.out.println("factorial of given number:"+fact);
+System.out.println("factorial of given number:"+fact);<br>
+for ( int i=1;i<=n;i++){
+if (i%2==0){
+System.out.println("it is a composite number:"+i);
+}
+else{
+System.out.println("it is a prime number:"+i);
+}
+}
 
 }
 }
