@@ -104,11 +104,15 @@ System.out.println("\n THANK YOU FOR APPLYING THIS");
 import java.util.Scanner;
 
 class BankAccount {
-    private float existing; // Class-level variable to store balance
-    private Scanner input;  // Single Scanner instance for input
+ // Class-level variable to store balance
+    private float existing;
+    private Scanner input; // Single Scanner instance for input
+    public  String name;
     // Constructor
     public BankAccount() {
         input = new Scanner(System.in);
+        System.out.println("Enter the account holder name :");
+        this.name=input.next();
         System.out.print("Enter existing amount in bank account: ");
         this.existing = input.nextFloat();
     }
@@ -135,5 +139,7 @@ class BankAccount {
         BankAccount customer1 = new BankAccount();
         customer1.deposit();
         customer1.withdrawal();
-      }
-  }
+        System.out.println("thank you " + customer1.name + " for using our bank");
+}
+}
+
