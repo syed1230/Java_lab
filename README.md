@@ -101,6 +101,7 @@ System.out.println("\n THANK YOU FOR APPLYING THIS");
 }
 }
 <!--bank code-->
+
 import java.util.Scanner;
 
 class BankAccount {
@@ -140,6 +141,6 @@ class BankAccount {
         customer1.deposit();
         customer1.withdrawal();
         System.out.println("thank you " + customer1.name + " for using our bank");
-}
-}
 
+}
+}
