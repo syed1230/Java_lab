@@ -171,6 +171,31 @@ two.details();
 System.out.println("\nThese are the details of the two books which are famously treading nowadays\n THANK YOU ");
 }
 
-
 }
+class myclass{
+//creating the variables
+
+static int count=0;
+final double pi=3.1415;
+//creating a constructor 
+myclass(){
+count++;
+}
+//method to print the values
+public void values(){
+System.out.println(+count);
+System.out.println(+pi);
+}
+//object and the main function
+public static void main(String[] args){
+myclass one=new myclass();
+one.values();
+myclass two=new myclass();
+two.values();
+myclass three=new myclass();
+three.values();
+myclass four=new myclass();
+four.values();
+}
+
 }
