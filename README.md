@@ -172,4 +172,4 @@ book two=new book("ANGLES IN TIBET","S.SLUMP",2001);
 two.details();
 System.out.println("\nThese are the details of the two books which are famously treading nowadays\n THANK YOU ");
 }
-
+}
