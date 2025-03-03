@@ -156,13 +156,11 @@ public int year_publication;
 book(String title_of_book,String author,int year_publication){
 this.title_of_book=title_of_book;
 this.author=author;
-this.year_publication;=year_publication;
+this.year_publication=year_publication;
 }
 //creating the method to print DETAILS
 public void details(){
-System.out.println("the title of the book is: "+title_of_book);
-System.out.println("The author of te book is: "+author);
-System.out.println("the year of publication is:"+year_publication+"\n");
+System.out.println("the title of the book is: "+title_of_book+"\nThe author of te book is: "+author+"\nthe year of publication is:"+year_publication+"\n");
 }
 //creating the main class and objects for the method
 public static void main(String[] args){
@@ -171,5 +169,8 @@ one.details();
 book two=new book("ANGLES IN TIBET","S.SLUMP",2001);
 two.details();
 System.out.println("\nThese are the details of the two books which are famously treading nowadays\n THANK YOU ");
+}
+
+
 }
 }
