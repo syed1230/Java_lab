@@ -199,3 +199,43 @@ four.values();
 }
 
 }
+<!--code for single inheritences-->
+import java.util.Scanner;
+
+class CLanguage {
+    String one = "c";
+    int package1 = 210000;
+    public void info_1() {
+        System.out.println("the company " + one + " gives a package of: " + package1 + " for c language");
+    }
+}
+
+class JavaLanguage extends CLanguage {
+    String two = "java";
+    int package2 = 10000000;
+    public void info_2() {
+        System.out.println("the company " + two + " gives a package of: " + package2 + " for java");
+    }
+}
+
+class OOPs extends JavaLanguage {
+    public static void main(String[] args) {
+        String king = "oops";
+        int package3 = 1000000000;
+        JavaLanguage I = new JavaLanguage();
+        CLanguage cLang = new CLanguage(); // Create instance of CLanguage
+        System.out.println("enter java/c/oops");
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter your course language:");
+        String learn = input.nextLine(); // Changed to nextLine()
+        if (learn.equals(cLang.one)) { // Accessing instance variable through the instance
+            I.info_1();
+            System.out.println("\nyou have chosen the c language\nAll the best"); // Fixed typo
+        } else if (learn.equals(I.two)) { // Accessing instance variable through the instance
+            I.info_2();
+            System.out.println("\nyou have chosen the java language\nAll the best"); // Fixed typo
+        } else if (learn.equals(king)) { // Changed to equals()
+            System.out.println("the king is " + king + " with high package of: " + package3);
+        }
+    }
+}
