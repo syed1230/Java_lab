@@ -304,7 +304,7 @@ for (int j=0;j<4;j++){
 System.out.print(" ");
 }
 for (int k=0;k<i;k++){
-System.out.print("doctor ");
+System.out.print("hacker ");
 }
 System.out.println();
 }
