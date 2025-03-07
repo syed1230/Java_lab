@@ -239,3 +239,44 @@ class OOPs extends JavaLanguage {
         }
     }
 }
+<!--single inheritence-->
+class Amma {  // Superclass
+    String clg_1 = "amaravati";
+    String clg_2 = "chennai";
+    String clg_3 = "bengaluru";
+
+    
+}
+class Enginer extends Amma {  // Subclass
+Enginer(String clg_1,String clg_2,String clg_3) {
+       this.clg_1=clg_1;
+this.clg_2=clg_2;
+this.clg_3=clg_3;
+    }
+    public void cse_amar() {
+        System.out.println("You have selected the "+clg_1+" branch.");
+for (int i=1;i<2;i++){
+System.out.println("increase your career our collage\n***\n\n");
+}
+    }
+    public void cse_chennai() {
+        System.out.println("You have selected the "+clg_2+" branch.");
+for (double i=8.5;i<=11 ;i++){
+System.out.println("your cgpa has incrades in our collage:"+i);
+}
+    }
+    public void cse_bengaluru() {
+        System.out.println("***\n\nYou have selected the "+clg_3+" branch.");
+for(int i=1;i<4;i++){
+System.out.println("According to your cgpa ur fee-slab is: slab-"+i);
+}
+    }
+}
+ class inherit {
+    public static void main(String[] args) {
+        Enginer eng = new Enginer("amaravati","chennai","bengaluru");  // Create an object of Enginer
+        eng.cse_amar();  // Call method for Amaravati branch
+        eng.cse_chennai();  // Call method for Chennai branch
+        eng.cse_bengaluru();  // Call method for Bengaluru branch
+    }
+}
