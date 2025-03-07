@@ -280,3 +280,55 @@ System.out.println("According to your cgpa ur fee-slab is: slab-"+i);
         eng.cse_bengaluru();  // Call method for Bengaluru branch
     }
 }
+<!--multilevel inheritence-->
+class Amma {  // Superclass
+    String clg_1 ;
+    String clg_2 ;
+    String clg_3;
+
+    
+}
+class Enginer extends Amma {  // Subclass
+    public void cse_amar() {
+        System.out.println("You have selected the "+clg_1+" branch.");
+System.out.println("you have studied enginering for the following years:\n");
+for (int i=2024;i<2029;i++){
+System.out.println(+i);
+}
+    }
+    public void cse_coeim() {
+        System.out.println("*****\n\nYou have selected the "+clg_2+" branch.");
+System.out.println("studied enginering and became haker\n\n");
+for (int i=4;i>=1;i--){
+for (int j=0;j<4;j++){
+System.out.print(" ");
+}
+for (int k=0;k<i;k++){
+System.out.print("doctor ");
+}
+System.out.println();
+}
+    }
+}
+class Administer extends Enginer{
+Administer(String clg_1,String clg_2,String clg_3) {
+       this.clg_1=clg_1;
+this.clg_2=clg_2;
+this.clg_3=clg_3;
+    }
+    public void cse_fad() {
+        System.out.println("\n\n\nYou have selected the "+clg_3+" branch.");
+System.out.println("you have became a :");
+for(int i=4;i>=1;i--){
+System.out.println("Doctor!!");
+}
+    }
+}
+ class inherit {
+    public static void main(String[] args) {
+        Administer eng = new Administer("amritapuri","coeimbator","faridab");  // Create an object of Enginer
+        eng.cse_amar();  // Call method for Amaravati branch
+        eng.cse_coeim();  // Call method for Chennai branch
+        eng.cse_fad();  // Call method for Bengaluru branch
+    }
+}
