@@ -334,12 +334,15 @@ System.out.println("Doctor!!");
 }
 <!--10/03/2025-->
 import java.util.Scanner;
+//PARENT CLKASS 
 class Calci{
     float a;
     float b;
     static String ad="+";
      static String su="-";
      static String mu="*";
+     float x;
+     float y;
     Calci(){
         System.out.println("welcome to the calculator");
     }
@@ -348,13 +351,15 @@ class Simple extends Calci {
 Simple(float a,float b){
     this.a=a;
     this.b=b;
-} 
+}
+ //ADDITION METHOD
     public  float add(float a, float b){
         float c;
         c=a+b;
-        System.out.println("the addition of the two numbers is :"+c);    
+        System.out.println("\n\nADDITION: "+c);
         return c;
     }
+    //SUBTRACTION METHOD
     public float sub(float a , float b){
         float d;
         if(a>b){
@@ -363,22 +368,23 @@ Simple(float a,float b){
         else{
             d=b-a;
         }
-        System.out.println("the substraction of the two nukmbers is :"+d);
+        System.out.println("\n\nSUBSTRACTION: "+d);
         return d;
     }
+//MULTIPICATION METHOD 
     public float  multi(float a,float b){
         float e;
         e=a*b;
-        System.out.println("this is the multipication of the two numbers :"+e); 
+        System.out.println("\n\n MULTIPICATION: "+e);
         return e;
     }
 }
+//MAIN FUNCTION 
 class book extends Calci {
     public static void main(String[] args){
         Scanner input=new Scanner(System.in);
         System.out.println("enter types: [+] or[-]or[*]");
         String type=input.nextLine();
-        Calci one=new Calci();
         Simple two=new Simple(4,5);
         if (type.equals(ad)){
         two.add(4,5);
