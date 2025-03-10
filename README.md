@@ -332,3 +332,62 @@ System.out.println("Doctor!!");
         eng.cse_fad();  // Call method for Bengaluru branch
     }
 }
+<!--10/03/2025-->
+import java.util.Scanner;
+class Calci{
+    float a;
+    float b;
+    static String ad="+";
+     static String su="-";
+     static String mu="*";
+    Calci(){
+        System.out.println("welcome to the calculator");
+    }
+}
+class Simple extends Calci {
+Simple(float a,float b){
+    this.a=a;
+    this.b=b;
+} 
+    public  float add(float a, float b){
+        float c;
+        c=a+b;
+        System.out.println("the addition of the two numbers is :"+c);    
+        return c;
+    }
+    public float sub(float a , float b){
+        float d;
+        if(a>b){
+            d=a-b;
+        }
+        else{
+            d=b-a;
+        }
+        System.out.println("the substraction of the two nukmbers is :"+d);
+        return d;
+    }
+    public float  multi(float a,float b){
+        float e;
+        e=a*b;
+        System.out.println("this is the multipication of the two numbers :"+e); 
+        return e;
+    }
+}
+class book extends Calci {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        System.out.println("enter types: [+] or[-]or[*]");
+        String type=input.nextLine();
+        Calci one=new Calci();
+        Simple two=new Simple(4,5);
+        if (type.equals(ad)){
+        two.add(4,5);
+        }
+        else if(type.equals(su)){
+        two.sub(4,5);
+        }
+        else if (type.equals(mu)){
+        two.multi(4,5);
+        }
+    }
+}
