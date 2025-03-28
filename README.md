@@ -397,3 +397,71 @@ class book extends Calci {
         }
     }
 }
+<!--10/03/2025-->
+<!--calculator programm-->
+import java.util.Scanner; 
+class Calculator {
+    // Base class for the calculator
+Calculator(){
+System.out.println("\nthis is the calculator program\n");
+System.out.println("------------------------------------");
+}
+
+}
+
+class Simple extends Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+}
+
+class Super extends Simple {
+    public int square(int a) {
+        return a * a;
+    }
+    public int cube(int a) {
+        return a * a * a;
+    }
+    public double squareRoot(int a) {
+        return Math.sqrt(a);
+    }
+}
+class Advanced extends Super { 
+    public double divide(int a, int b) {
+        if (b != 0) {
+            return (double) a / b;
+        } else {
+            return 0; // Division by zero is not allowed.
+        }
+    }
+    public int modulus(int a, int b) {
+        return a % b;
+    }
+}
+public class inherit {
+    public static void main(String[] args) {
+	Scanner input=new Scanner(System.in);
+	System.out.println("enter a value:");
+	int a=input.nextInt();
+	System.out.println("enter b value: ");
+	int b=input.nextInt();
+        Simple simpleCalc = new Simple();
+        System.out.println("Addition: " + simpleCalc.add(a, b));
+        System.out.println("Subtraction: " + simpleCalc.subtract(a, b));
+        System.out.println("Multiplication: " + simpleCalc.multiply(a, b));
+        Advanced advancedCalc = new Advanced();
+        System.out.println("Division: " + advancedCalc.divide(a, b));
+        System.out.println("Modulus: " + advancedCalc.modulus(a, b));
+        Super superCalc = new Super();
+        System.out.println("Square: " + superCalc.square(a));
+        System.out.println("Cube: " + superCalc.cube(b));
+        System.out.println("Square Root: " + superCalc.squareRoot(b));
+    }
+}
+
